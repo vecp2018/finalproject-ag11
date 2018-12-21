@@ -1127,25 +1127,53 @@ doc["forloop"].bind('click', Forloop.prog)
 </p>
 <!-- forloop ends -->
 <p></p>
-<!-- s40328461-1 start -->
+<!-- forloop1 start -->
 <p>
 <script type="text/python3">
 from browser import document as doc
 import beditor
-s40328461-1 = beditor.editor("""# 40328461-1
+Forloop1 = beditor.editor("""# ag11 test
+for i in range(5):
+    print(i)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "forloop1" 的按鈕點按時, 執行 Forloop1 物件中的 prog 方法
+doc["forloop1"].bind('click', Forloop1.prog)
+</script>
+</p>
+<!-- forloop1 ends -->
+<p></p>
+<!-- s61 start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+S61 = beditor.editor("""# 40328461
+'''累加
+
+定義一個叫sum的變數   初始值=0
+
+for迴圈   n在範圍1~10內
+
+sum=sum+n
+
+傳回給sum
+
+列印sum變數'''
 def sum():
     sum = 0
     for n in range(1,10):
         sum = sum + n
     return sum
+
 print(sum())
+
 """, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "s40328461-1" 的按鈕點按時, 執行 s40328461-1 物件中的 prog 方法
-doc["s40328461-1"].bind('click', s40328461-1.prog)
+# id 為 "s61" 的按鈕點按時, 執行 S61 物件中的 prog 方法
+doc["s61"].bind('click', S61.prog)
 </script>
 </p>
-<!-- s40328461-1 ends -->
-<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="s40328461-1">s40328461-1</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bunny">Bunny</button><button id="spur">Spur</button><button id="clear">Clear</button></p><h1>繪圖範例</h1>
+<!-- s61 ends -->
+<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="forloop1">ag11 test</button><button id="s61">S61</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bunny">Bunny</button><button id="spur">Spur</button><button id="clear">Clear</button></p><h1>繪圖範例</h1>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>

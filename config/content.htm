@@ -1141,7 +1141,39 @@ doc["forloop1"].bind('click', Forloop1.prog)
 </script>
 </p>
 <!-- forloop1 ends -->
-<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="forloop1">ag11 test</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bunny">Bunny</button><button id="spur">Spur</button><button id="clear">Clear</button></p><h1>繪圖範例</h1>
+<p></p>
+<!-- s61 start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+S61 = beditor.editor("""# 40328461
+'''累加
+
+定義一個叫sum的變數   初始值=0
+
+for迴圈   n在範圍1~11內 所以從1加到10
+
+sum=sum+n
+
+傳回給sum
+
+列印sum變數'''
+def sum():
+    sum = 0
+    for n in range(1,11):
+        sum = sum + n
+    return sum
+
+print(sum())
+
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "s61" 的按鈕點按時, 執行 S61 物件中的 prog 方法
+doc["s61"].bind('click', S61.prog)
+</script>
+</p>
+<!-- s61 ends -->
+<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="forloop1">ag11 test</button><button id="s61">S61</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bunny">Bunny</button><button id="spur">Spur</button><button id="clear">Clear</button></p><h1>繪圖範例</h1>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
